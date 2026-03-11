@@ -1,1 +1,1 @@
-# sonamwangmo_02250370_DSO101_A1
+https://github.com/sonamwangmo9/sonamwangmo_02250370_DSO101_A1.git
