@@ -3,24 +3,16 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-<<<<<<< HEAD
     "start": "node server.js",
     "dev": "nodemon server.js"
-=======
-    "start": "node server.js"
->>>>>>> 0ed9112836d8b27adf2f0727e50278f9fc65ba61
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-<<<<<<< HEAD
     "express": "^4.18.2",
     "pg": "^8.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-=======
-    "express": "^4.18.2"
->>>>>>> 0ed9112836d8b27adf2f0727e50278f9fc65ba61
   }
 }
