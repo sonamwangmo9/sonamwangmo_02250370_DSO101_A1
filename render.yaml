@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: be-todo
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_PORT
+        value: 5432
+      - key: PORT
+        value: 5000
+      - key: NODE_ENV
+        value: production
+
+  - type: web
+    name: fe-todo
+    env: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://be-todo.onrender.com
+
+  - type: pserv
+    name: db-todo
+    env: docker
+    image:
+      url: postgres:15-alpine
+    envVars:
+      - key: POSTGRES_DB
+        value: tododb
+      - key: POSTGRES_USER
+        value: todouser
+      - key: POSTGRES_PASSWORD
+        generateValue: true
