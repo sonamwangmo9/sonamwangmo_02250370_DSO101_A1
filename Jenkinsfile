@@ -13,21 +13,21 @@ pipeline {
         stage('Install') {
             steps {
                 dir('backend') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
         stage('Build') {
             steps {
                 dir('backend') {
-                    sh 'npm run build'
+                    bat 'npm run build'
                 }
             }
         }
         stage('Test') {
             steps {
                 dir('backend') {
-                    sh 'npm test'
+                    bat 'npm test'
                 }
             }
             post {
